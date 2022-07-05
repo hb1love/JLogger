@@ -22,25 +22,6 @@
 
 import Foundation
 
-public protocol Also {}
-public extension Also where Self: Any {
-  
-  ///  `also`
-  ///
-  ///  let member = Member(name: "jayce", role: .owner)
-  ///  let org = Organization()
-  ///
-  ///  org.also { print("new member") }
-  ///    .addMember(member)
-  @discardableResult
-  func also(_ block: (() -> Void)) -> Self {
-    block()
-    return self
-  }
+public class JLogger {
+
 }
-
-extension NSObject: Also {}
-
-extension Array: Also {}
-extension Dictionary: Also {}
-extension Set: Also {}

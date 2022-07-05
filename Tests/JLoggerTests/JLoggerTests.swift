@@ -25,56 +25,7 @@ import XCTest
 
 class JLoggerTests: XCTestCase {
 
-  func testAlso() {
-    let member = Member(name: "jayce", role: .owner)
-    let org = Organization()
-
-    org.also { print("new member") }
-      .addMember(member)
-
-    XCTAssertEqual(org.member?.name, "jayce")
+  func testJLogger() {
+    XCTAssertTrue(true)
   }
-//
-//  func testLet() {
-//    var org: Organization?
-//    org = Organization(name: "podo", member: Member(name: "jayce", role: .member))
-//
-//    org?.member?.let {
-//      $0.role = .owner
-//    }
-//
-//    XCTAssertEqual(org?.member?.role, .owner)
-//
-//    let member = org?.let { org -> Member? in
-//      org.name = "new podo"
-//      return org.member
-//    }
-//
-//    XCTAssertEqual(org?.name, "new podo")
-//    XCTAssertEqual(member?.name, "jayce")
-//  }
-//
-//  func testWith() {
-//    let org = Organization()
-//    org.member = Member()
-//
-//    let description = with(org) {
-//      "Orgnaization name is \($0.name), "
-//        .appending("member name is \($0.member!.name)")
-//    }
-//
-//    XCTAssertEqual(description, "Orgnaization name is default, member name is user")
-//  }
-//
-//  func testWith_optional() {
-//    let org = Organization()
-//
-//    with(org.member) {
-//      $0?.name = "Org!!"
-//      $0?.role = .owner
-//    }
-//
-//    XCTAssertTrue(org.name == "default")
-//    XCTAssertTrue(org.member?.role == nil)
-//  }
 }
